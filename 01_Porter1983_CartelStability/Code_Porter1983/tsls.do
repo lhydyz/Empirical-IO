@@ -4,6 +4,7 @@ cd /Users/apple/Dropbox/Documents/Resources/06_Industrial_Organization/04_CU_Xia
 use Data/jecnew
 
 // Demand side
-ivregress 2sls lnQ L (lngr=m1-m12)
+ivregress 2sls lnQ L m1-m12 (lngr=po DM1-DM4)
 // Supply side
-ivregress 2sls lngr L DM1-DM4 po (lnQ=m1-m12)
+ivregress 2sls lngr DM1-DM4 po m1-m12 (lnQ=L)
+* according to the paper and your own matlab steps, you made some mistakes when write the two 2sls regression expressions.
